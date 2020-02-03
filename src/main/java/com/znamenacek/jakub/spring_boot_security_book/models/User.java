@@ -1,5 +1,6 @@
 package com.znamenacek.jakub.spring_boot_security_book.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,6 +20,7 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @JsonIgnoreProperties("users")
     @ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable( //This is only possibility for ManyToMany association
             name="user_role",

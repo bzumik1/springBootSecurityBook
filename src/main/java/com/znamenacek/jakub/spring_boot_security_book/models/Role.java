@@ -1,5 +1,6 @@
 package com.znamenacek.jakub.spring_boot_security_book.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,6 +16,7 @@ public class Role {
 
     @Column(nullable = false, unique = true)
     private String name;
+
 
     @ManyToMany(mappedBy = "roles")
     private List<User> users;
