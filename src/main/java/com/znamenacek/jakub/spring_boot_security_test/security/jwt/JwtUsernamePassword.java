@@ -1,11 +1,10 @@
 package com.znamenacek.jakub.spring_boot_security_test.security.jwt;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter @Getter @NoArgsConstructor
-public class JwtUsernamePasswordAuthenticationRequest {
+@Getter @Setter
+public class JwtUsernamePassword {
     private String username;
     private String password;
 }

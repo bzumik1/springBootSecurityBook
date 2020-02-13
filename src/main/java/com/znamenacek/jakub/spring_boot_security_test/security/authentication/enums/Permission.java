@@ -3,14 +3,13 @@ package com.znamenacek.jakub.spring_boot_security_test.security.authentication.e
 import lombok.Getter;
 
 @Getter
-public enum  UserPermissions {
+public enum Permission {
     READ("data:read"),
     WRITE("data:write");
 
     private final String permission;
 
-    UserPermissions(String permission){
+    Permission(String permission) {
         this.permission = permission;
     }
-
 }

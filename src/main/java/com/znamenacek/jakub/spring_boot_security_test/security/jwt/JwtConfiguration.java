@@ -5,12 +5,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@Setter @Getter @NoArgsConstructor
-@ConfigurationProperties("application.jwt")
+@ConfigurationProperties(prefix = "jwt")
+@Getter @Setter @NoArgsConstructor
 public class JwtConfiguration {
     private String tokenPrefix;
-    private String authorizationHeader;
-    private String secretKey;
-    private int tokenExpirationAfterDays;
+    private String tokenHeader;
+    private String secret;
+    private int tokenExpirationInDays;
+
 
 }
